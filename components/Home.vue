@@ -13,7 +13,7 @@
       </div>
 
       <div>
-        <v-btn class="pink white--text my-15" x-large> Contact </v-btn>
+        <v-btn class="pink white--text my-15 " x-large> Contact </v-btn>
         <div>
           <a
             class="mr-4 text-decoration-none"
@@ -58,6 +58,7 @@
         </svg>
         <br />
         <div class="text-center">
+          <div class="text-p pink-text font-weight-bold">How many stars will you give me </div>
           <v-rating
             v-model="rating"
             icon-label="custom icon label text {0} of {1}"

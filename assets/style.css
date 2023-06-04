@@ -12,3 +12,12 @@
 html{
   scroll-behavior: smooth;
 }
+
+.txt{
+  display: flex;
+padding-top: 10px;
+margin-left: 20px;
+}
+.mt-50 {
+  margin-top: 72px !important;
+}

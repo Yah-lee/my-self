@@ -10,29 +10,22 @@
     </v-navigation-drawer>
     <Header :list="list" @openDrawer="drawer = true" /> -->
 
-    <style>
-      .drawer-item {
-        color: #e91e63;
-        text-align: center;
-        padding-top: 10px;
-        margin-top: 100px;
-      }
-      .drawer-item:hover {
-        background-color: #fce4ec;
-      }
-    </style>
-
     <v-navigation-drawer
-      class="font-weight-bold"
+      class="font-weight-bold text-h4 py-16 mt-50 text-center black"
       v-model="drawer"
       fixed
       temporary
       right
       width="200"
     >
-      <h1 v-for="item in list" :key="item" class="drawer-item">
+      <a
+        v-for="item in list"
+        :key="item.id"
+        class=" pink--text font-weight-bold text-decoration-none txt "
+        :href="`#${item.id}`"
+      >
         {{ item.text }}
-      </h1>
+      </a>
     </v-navigation-drawer>
     <Header :list="list" @openDrawer="drawer = true" />
 
@@ -54,7 +47,7 @@
     <v-container>
       <Home />
       <About />
-
+      <myskill />
       <!-- Skill -->
 
       <div>
@@ -271,6 +264,8 @@
   </v-app>
 </template>
 <script>
+import MySkill from "../components/MySkill.Vue";
+
 export default {
   data() {
     return {
@@ -305,5 +300,6 @@ export default {
       ],
     };
   },
+  components: { MySkill },
 };
 </script>
